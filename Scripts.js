@@ -1,6 +1,7 @@
 const typeColor = {
   bug: "#26de81",
-  dragon: "#ffeaa7",
+  dragon: "#f0d273",
+  dark: "#170c24",
   electric: "#fed330",
   fairy: "#FF0069",
   fighting: "#30336b",
@@ -14,6 +15,7 @@ const typeColor = {
   poison: "#6c5ce7",
   psychic: "#a29bfe",
   rock: "#2d3436",
+  steel: "#565e5b",
   water: "#0190FF",
 };
 
@@ -86,7 +88,7 @@ let styleCard = (color) => {
 
 // Generar un Pokémon aleatorio
 let getPokeData = () => {
-  let id = Math.floor(Math.random() * 150) + 1;
+  let id = Math.floor(Math.random() * 1008) + 1;
   fetch(`${url}${id}`)
     .then((response) => response.json())
     .then((data) => generateCard(data))
